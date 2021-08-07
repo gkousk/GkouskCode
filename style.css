@@ -1,13 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
 html,
 body {
     margin: 0px;
     padding: 0px;
 }
 
+
+/*-------- Navbar --------*/
+
 nav {
     width: 100%;
     background-color: #292c2f;
     height: 100px;
+    position: fixed;
 }
 
 .nav-content {
@@ -32,14 +41,16 @@ nav {
     text-align: center;
     padding: 20px 16px;
     text-decoration: none;
-    font: normal 36px 'Cookie', cursive;
+    font-size: 36px;
+    font-weight: 500;
     display: flex;
     align-items: center;
 }
 
 .logo-text span {
     color: #5383d3;
-    font: normal 36px 'Cookie', cursive;
+    font-size: 36px;
+    font-weight: 500;
 }
 
 .nav-content>.links {
@@ -53,7 +64,8 @@ nav {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font: normal 20px 'Cookie', cursive;
+    font-size: 20px;
+    font-weight: 500;
 }
 
 ul {
@@ -68,21 +80,87 @@ li {
     float: left;
 }
 
-.hero img{
+
+/*-------- Hero --------*/
+
+.hero img {
     width: 100%;
     height: auto;
 }
+
+.slides {
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
+
+/*-------- White --------*/
 
 .white {
     width: 100%;
-    height: 1000px;
     background-color: white;
+    padding-top: 5%;
+    padding-bottom: 10%;
 }
 
-.bg img{
+.white h2 {
+    color: #5383d3;
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.white p {
+    color: #8f9296;
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-top: 2%;
+    text-align: center;
+}
+
+
+/*-------- Background image --------*/
+
+.bg {
+    background-color: #5383d3;
+}
+
+.bg img {
     width: 100%;
     height: auto;
 }
+
+.bg .flex {
+    display: flex;
+    top: 0px;
+    width: 100%;
+    align-items: center;
+}
+
+.flex-item {
+    width: 50%;
+    height: 50%;
+    margin: 5% 0% 5% 10%;
+}
+
+.flex-item img {
+    height: auto;
+    border-radius: 10%;
+}
+
+.flex-item p {
+    font-size: 25px;
+    font-weight: 500;
+    padding-right: 30%;
+    color: white;
+    line-height: 200%;
+}
+
+
+/*-------- Footer --------*/
 
 footer {
     bottom: 0;
@@ -111,7 +189,7 @@ footer {
 
 .footer-distributed h3 {
     color: #ffffff;
-    font: normal 36px 'Cookie', cursive;
+    font-size: 36px;
     margin: 0;
 }
 
@@ -219,7 +297,48 @@ footer {
     margin-bottom: 5px;
 }
 
+
+/*-------- Responsive --------*/
+
+@media (max-width: 1450px) {
+    .flex-item p {
+        font-size: 25px;
+        padding-right: 25%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .flex-item p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .flex-item {
+        width: 80%;
+        margin: 5% 10% 5% 10%;
+    }
+    .bg .flex {
+        flex-direction: column;
+    }
+    .flex-item p {
+        text-align: center;
+        padding-right: 0%;
+        font-size: 18px;
+    }
+}
+
 @media (max-width: 880px) {
+    nav {
+        position: static;
+    }
+    .white h2 {
+        font-size: 30px;
+    }
+    .white p {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
     .footer-distributed {
         font: bold 14px sans-serif;
     }
@@ -233,5 +352,35 @@ footer {
     }
     .footer-distributed .footer-center i {
         margin-left: 0;
+    }
+}
+
+@media (max-width: 591px) {
+    .white h2 {
+        font-size: 25px;
+    }
+    .white p {
+        font-size: 16px;
+    }
+    nav {
+        height: 170px;
+    }
+    .logo {
+        width: 100%;
+    }
+    .logo-text {
+        justify-content: center;
+    }
+    .nav-content>.links {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 70px;
+    }
+    .links a {
+        font-size: 16px;
+    }
+    ul {
+        margin-top: 0px;
     }
 }
