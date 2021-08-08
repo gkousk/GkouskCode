@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="images/icon.png">
+    <script src="contact.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("user_Vq1fhgLPrRE2VkPeZZdEL");
+        })();
+    </script>
 
     <title>GkouskCode</title>
 </head>
@@ -29,36 +36,17 @@
         </div>
     </nav>
     <main>
-        <div class="hero">
-            <img class="slides" src="images/hero.jpg">
-            <img class="slides" src="images/hero2.jpg">
-            <img class="slides" src="images/hero3.jpg">
+
+        <div class="contactForm">
+            <h2>Contact us</h2>
+            <input type="text" id="name" placeholder="Full name" />
+            <input type="email" id="mail" placeholder="Email" />
+            <textarea name="message" id="msg" placeholder="Message"></textarea>
+            <button onclick='sendMail()' name="submit">Send Mail</button>
+            <h1 id="r"></h1>
         </div>
-        <div class="white">
-            <h2>Custom websites</h2>
-            <p>Curabitur euismod maximus tellus. Mauris a nibh felis. Vestibulum mattis risus vitae congue aliquam. Sed rutrum ut enim sed porta. Etiam vel justo at purus condimentum efficitur ac et tellus. Duis consequat nunc sed est lacinia imperdiet.
-                Nulla porttitor rhoncus eros, et interdum tellus ornare non. Integer nec faucibus tellus, vitae pellentesque metus. Sed quam tellus, eleifend placerat tincidunt nec, pretium et odio. Vivamus dolor nibh, commodo vitae porta mattis, vestibulum
-                non ex. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-        </div>
-        <div class="bg">
-            <div class="flex">
-                <div class="flex-item">
-                    <img src="images/flex-img.jpg" alt="flex-img">
-                </div>
-                <div class="flex-item">
-                    <p>
-                        Etiam egestas vel ligula eget ornare. Etiam dictum enim eget turpis porttitor, quis mattis risus mattis. Praesent finibus, ligula rutrum dictum aliquet, ipsum tortor elementum libero, sit amet lacinia sapien quam eu orci. Quisque sodales eu nibh quis
-                        pretium.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="white">
-            <h2>Custom applications</h2>
-            <p>Curabitur euismod maximus tellus. Mauris a nibh felis. Vestibulum mattis risus vitae congue aliquam. Sed rutrum ut enim sed porta. Etiam vel justo at purus condimentum efficitur ac et tellus. Duis consequat nunc sed est lacinia imperdiet.
-                Nulla porttitor rhoncus eros, et interdum tellus ornare non. Integer nec faucibus tellus, vitae pellentesque metus. Sed quam tellus, eleifend placerat tincidunt nec, pretium et odio. Vivamus dolor nibh, commodo vitae porta mattis, vestibulum
-                non ex. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-        </div>
+
+
     </main>
     <footer class="footer-distributed">
 
